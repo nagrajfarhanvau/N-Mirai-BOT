@@ -17,7 +17,7 @@ handleEvent: async function ({ api, event, args }) {
     const fs = require("fs-extra")
   const content = event.body ? event.body : '';
   const body = content.toLowerCase();
-  const {alldown} = require("nayan-video-downloader")
+  const {alldown} = require("nayan-media-downloaders")
   if (body.startsWith("https://")) {
   api.setMessageReaction("🔍", event.messageID, (err) => {}, true);
 const data = await alldown(content);
@@ -30,7 +30,7 @@ const data = await alldown(content);
     fs.writeFileSync(__dirname + "/cache/auto.mp4", Buffer.from(video, "utf-8"))
 
         return api.sendMessage({
-            body: `●❯────────────────❮●\n        -♦𝐓𝐀𝐍𝐕𝐈𝐑-𝐁𝐎𝐓♦-       \n●❯────────────────❮●: ${title}`,
+            body: `《TITLE》: ${title}`,
             attachment: fs.createReadStream(__dirname + "/cache/auto.mp4")
 
         }, event.threadID, event.messageID);
