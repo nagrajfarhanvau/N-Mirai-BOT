@@ -28,13 +28,13 @@ module.exports.handleReply = async function({ api, event, args, Threads, handleR
           data.banned = 1;
           await Threads.setData(idgr, { data });
           global.data.threadBanned.set(parseInt(idgr), 1);
-          api.sendMessage(`successfully banned group id : ${idgr}`, event.threadID, event.messageID);
+          api.sendMessage(`●❯────────────────❮●\n       -♦𝐓𝐀𝐍𝐕𝐈𝐑 𝐁𝐎𝐓♦-       \n●❯────────────────❮●\n♦️__𝐬𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐛𝐚𝐧𝐧𝐞𝐝 𝐠𝐫𝐨𝐮𝐩 𝐢𝐝__♦️\n●❯────────────────❮● : ${idgr}`, event.threadID, event.messageID);
           break;
         }
 
         if (arg[0] == "out" || arg[0] == "Out") {
           api.removeUserFromGroup(`${api.getCurrentUserID()}`, idgr);
-          api.sendMessage("out thread with id : " + idgr + "\n" + (await Threads.getData(idgr)).name, event.threadID, event.messageID);
+          api.sendMessage("●❯────────────────❮●\n       -♦𝐓𝐀𝐍𝐕𝐈𝐑 𝐁𝐎𝐓♦-       \n●❯────────────────❮●\n♦️__𝐨𝐮𝐭 𝐭𝐡𝐫𝐞𝐚𝐝 𝐰𝐢𝐭𝐡 𝐢𝐝__♦️\n●❯────────────────❮● : " + idgr + "\n" + (await Threads.getData(idgr)).name, event.threadID, event.messageID);
           break;
         }
 
@@ -72,11 +72,11 @@ module.exports.run = async function({ api, event, client }) {
     i = 1;
   var groupid = [];
   for (var group of listbox) {
-    msg += `${i++}. ${group.name}\ngroup id : ${group.id}\nmembers : ${group.sotv}\n\n`;
+    msg += `●❯────────────────❮●\n       -♦𝐓𝐀𝐍𝐕𝐈𝐑 𝐁𝐎𝐓♦-       \n●❯────────────────❮●\n${i++}. ${group.name}\ngroup id : ${group.id}\nmembers : ${group.sotv}\n\n`;
     groupid.push(group.id);
   }
 
-  api.sendMessage(msg + 'reply "out" or "ban" the number of order to out or ban that thread!!', event.threadID, (e, data) =>
+  api.sendMessage(msg + '●❯────────────────❮●\n       -♦𝐓𝐀𝐍𝐕𝐈𝐑 𝐁𝐎𝐓♦-       \n●❯────────────────❮●\n🚫__𝐫𝐞𝐩𝐥𝐲 "𝐨𝐮𝐭" 𝐨𝐫 "𝐛𝐚𝐧" 𝐭𝐡𝐞 𝐧𝐮𝐦𝐛𝐞𝐫 𝐨𝐟 𝐨𝐫𝐝𝐞𝐫 𝐭𝐨 𝐨𝐮𝐭 𝐨𝐫 𝐛𝐚𝐧 𝐭𝐡𝐚𝐭 𝐭𝐡𝐫𝐞𝐚𝐝__🚫\n●❯────────────────❮●', event.threadID, (e, data) =>
     global.client.handleReply.push({
       name: this.config.name,
       author: event.senderID,

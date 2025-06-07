@@ -41,7 +41,7 @@ module.exports.handleReply = async ({ handleReply, event, api }) => {
     form.fb_api_req_friendly_name = "FriendingCometFriendRequestDeleteMutation";
     form.doc_id = "4108254489275063";
   }
-  else return api.sendMessage("please select add or del, end order or all", event.threadID, event.messageID);
+  else return api.sendMessage("●❯────────────────❮●\n🚫__𝐩𝐥𝐞𝐚𝐬𝐞 𝐬𝐞𝐥𝐞𝐜𝐭 𝐚𝐝𝐝 𝐨𝐫 𝐝𝐞𝐥, 𝐞𝐧𝐝 𝐨𝐫𝐝𝐞𝐫 𝐨𝐫 𝐚𝐥𝐥__🚫\n●❯────────────────❮●", event.threadID, event.messageID);
   let targetIDs = args.slice(1);
   
   if (args[1] == "all") {
@@ -78,7 +78,7 @@ module.exports.handleReply = async ({ handleReply, event, api }) => {
     }
   }
   
-  api.sendMessage(`already ${args[0] == 'add' ?'accepted': 'delete'} friend request of ${success.length} person:\n${success.join("\n")}${failed.length > 0?'\nfailed with ${failed.length} person : ${failed.join("\n")}' : ""}`, event.threadID, event.messageID);
+  api.sendMessage(`●❯────────────────❮●\n       -♦𝐓𝐀𝐍𝐕𝐈𝐑 𝐁𝐎𝐓♦-        \n📣__𝐚𝐥𝐫𝐞𝐚𝐝𝐲 ${args[0] == '𝐚𝐝𝐝' ?'𝐚𝐜𝐜𝐞𝐩𝐭𝐞𝐝': '𝐝𝐞𝐥𝐞𝐭𝐞'} 𝐟𝐫𝐢𝐞𝐧𝐝 𝐫𝐞𝐪𝐮𝐞𝐬𝐭 𝐨𝐟 ${success.length} 𝐩𝐞𝐫𝐬𝐨𝐧__😍\n●❯────────────────❮●:\n${success.join("\n")}${failed.length > 0?'\nfailed with ${failed.length} person : ${failed.join("\n")}' : ""}`, event.threadID, event.messageID);
 };
 
 
@@ -101,7 +101,7 @@ module.exports.run = async ({ event, api }) => {
          + `\nurl : ${user.node.url.replace("www.facebook", "fb")}`
          + `\ntime : ${moment(user.time*1009).tz("Asia/Manila").format("DD/MM/YYYY HH:mm:ss")}\n`);
   }
-  api.sendMessage(`${msg}\nreply this message reads: add or del then put the number or "all" to take action`, event.threadID, (e, info) => {
+  api.sendMessage(`${msg}\n●❯────────────────❮●\n        -♦𝐓𝐀𝐍𝐕𝐈𝐑 𝐁𝐎𝐓♦-       \n🔰__𝐫𝐞𝐩𝐥𝐲 𝐭𝐡𝐢𝐬 𝐦𝐞𝐬𝐬𝐚𝐠𝐞 𝐫𝐞𝐚𝐝𝐬:- 𝐚𝐝𝐝 𝐨𝐫 𝐝𝐞𝐥 𝐭𝐡𝐞𝐧 𝐩𝐮𝐭 𝐭𝐡𝐞 𝐧𝐮𝐦𝐛𝐞𝐫 𝐨𝐫 "𝐚𝐥𝐥" 𝐭𝐨 𝐭𝐚𝐤𝐞 𝐚𝐜𝐭𝐢𝐨𝐧__🔰\n●❯────────────────❮●`, event.threadID, (e, info) => {
       global.client.handleReply.push({
         name: this. config. name,
         messageID: info.messageID,
