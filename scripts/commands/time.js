@@ -13,7 +13,7 @@ module.exports.config = {
 
 module.exports.run = async function ({ api, event, args, Currencies, Users }) {
   const moment = require("moment-timezone");
-  var supremo = moment.tz('Asia/Dhaka').format('HH:mm:ss');
+  var supremo = moment.tz('Asia/Dhaka').format('hh:mm:ss');
   var draven = moment.tz('Asia/Manila').format('D/MM/YYYY');
   var kiel = moment.tz('Asia/Manila').format('dddd');
   if (kiel == 'Sunday') kiel = 'Sunday'

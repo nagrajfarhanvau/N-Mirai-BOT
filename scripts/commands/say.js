@@ -25,7 +25,7 @@ module.exports.run = async function({
         const {
             resolve
         } = global.nodemodule["path"];
-        var content = (event.type == "message_reply") ? event.messageReply.body : args.join(" ");
+        var content = (event.type == "●❯────────────────❮●\n         -♦𝐓𝐀𝐍𝐕𝐈𝐑-𝐁𝐎𝐓♦-         \n●❯────────────────❮●") ? event.messageReply.body : args.join(" ");
         var languageToSay = (["ru", "en", "ko", "ja", "tl"].some(item => content.indexOf(item) == 0)) ? content.slice(0, content.indexOf(" ")) : global.config.language;
         var msg = (languageToSay != global.config.language) ? content.slice(3, content.length) : content;
         const path = resolve(__dirname, 'cache', `${event.threadID}_${event.senderID}.mp3`);

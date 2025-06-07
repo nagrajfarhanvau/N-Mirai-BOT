@@ -19,7 +19,7 @@ start: async function({ nayan, events, args }) {
     const axios = require("axios")
     const request = require("request")
     const fs = require("fs-extra")
-  const { ytdown, ndown, tikdown, twitterdown } = require("nayan-media-downloaders")
+  const { ytdown, ndown, tikdown, twitterdown } = require("nayan-media-downloader")
     const { messageID, threadID } = events;
   if (!args[0]) return nayan.sendMessage("[ ! ] Input link.", threadID, messageID);
 
@@ -38,9 +38,9 @@ start: async function({ nayan, events, args }) {
     let imgs1 = (await axios.get(`${img1}`, {
         responseType: 'arraybuffer'
     })).data;
-    fs.writeFileSync(__dirname + "/cache/yt.mp4", Buffer.from(imgs1, "utf-8"));
+    fs.writeFileSync(__dirname + "/cache/fbvideo.mp4", Buffer.from(imgs1, "utf-8"));
     var allimage = [];
-    allimage.push(fs.createReadStream(__dirname + "/cache/yt.mp4"));
+    allimage.push(fs.createReadStream(__dirname + "/cache/fbvideo.mp4"));
 
     {
         msg += `✅Downloaded Successfully\n🔰TITLE : ${ti}`
