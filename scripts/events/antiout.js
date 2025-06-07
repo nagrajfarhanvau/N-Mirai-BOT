@@ -15,8 +15,8 @@ module.exports.run = async({ event, api, Threads, Users }) => {
  if (type == "self-separation") {
   api.addUserToGroup(event.logMessageData.leftParticipantFbId, event.threadID, (error, info) => {
    if (error) {
-    api.sendMessage(`Unable to re-add members ${name} to the group\n\n${name} blocked me or There is no Message option in the profile `, event.threadID)
-   } else api.sendMessage(`${name} 𝘀𝘁𝘂𝗽𝗶𝗱 𝘆𝗼𝘂 𝗵𝗮𝘃𝗲 𝗻𝗼 𝗲𝘀𝗰𝗮𝗽𝗲 𝗳𝗿𝗼𝗺 𝗵𝗲𝗿𝗲`, event.threadID);
+    api.sendMessage(`🔰___𝗲𝗶 𝗯𝗼𝗹𝗼𝗱 𝗮 𝗮𝗺𝗿 𝗹𝗼𝗴𝗲 𝗽𝗮𝗿𝗲 𝗻𝗮𝗶 𝘁𝗮𝗶 𝗮𝗺𝗿 𝗮 𝗯𝗹𝗼𝗰𝗸 𝗱𝗶𝘀𝗲 𝗿𝗲 ${name} 𝘁𝗮𝗶 𝘁𝗼𝗿𝗲 𝗿 𝗮𝗱𝗱 𝗸𝗼𝗿𝘁𝗲 𝗽𝗮𝗿𝗹𝗮𝗺 𝗻𝗮___😏 :( `, event.threadID)
+   } else api.sendMessage(` ___♦𝘅𝘂𝗻𝗮 𝗮𝗺𝗶 𝘁𝗵𝗮𝗸𝘁𝗲 𝘁𝗺𝗶 𝗯𝗲𝗿 𝗵𝗼𝗶𝘁𝗲 𝗽𝗮𝗿𝗯𝗮 𝗻𝗮 𝘁𝗼___😩, ${name} _🥹_ :(  `, event.threadID);
   })
  }
 }
