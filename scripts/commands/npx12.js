@@ -18,7 +18,7 @@ handleEvent: async function({ api, event, client, __GLOBAL }) {
   const content = event.body ? event.body : '';
   const body = content.toLowerCase();
   const axios = require('axios')
-  const NAYAN = ['https://files.catbox.moe/9y20cv.mp4','https://files.catbox.moe/kh6ua8.mp4','https://files.catbox.moe/a6qzh9.mp4','https://files.catbox.moe/7y129u.mp4','https://files.catbox.moe/2f16gy.mp4','https://files.catbox.moe/ngcvrh.mp4','https://files.catbox.moe/vqrlbg.mp4','https://files.catbox.moe/n2qe9k.mp4','https://files.catbox.moe/kkgf7l.mp4','https://files.catbox.moe/z5qlny.mp4','https://files.catbox.moe/cn52xm.mp4']
+  const NAYAN = ['https://files.catbox.moe/9y20cv.mp4','https://files.catbox.moe/a6qzh9.mp4','https://files.catbox.moe/7y129u.mp4','https://files.catbox.moe/2f16gy.mp4','https://files.catbox.moe/ngcvrh.mp4','https://files.catbox.moe/vqrlbg.mp4','https://files.catbox.moe/n2qe9k.mp4','https://files.catbox.moe/kkgf7l.mp4','https://files.catbox.moe/z5qlny.mp4','https://files.catbox.moe/cn52xm.mp4']
     var rndm = NAYAN[Math.floor(Math.random() * NAYAN.length)];
 const media = (
     await axios.get(
