@@ -17,7 +17,7 @@ module.exports.run = async ({ api, event,args }) => {  {
   const fs = require("fs-extra");
   const request = require("request");
 const axios = require('axios')
-const apis = await axios.get('https://raw.githubusercontent.com/MOHAMMAD-NAYAN-07/Nayan/main/api.json')
+const apis = await axios.get('https://raw.githubusercontent.com/MOHAMMAD-NAYAN/Nayan/main/api.json')
 const n = apis.data.api
  const { threadID, messageID, senderID, body } = event; 
 try {

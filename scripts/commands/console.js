@@ -10,8 +10,6 @@ module.exports.config = {
   cooldowns: 0
 };
 module.exports.handleEvent = async function ({ api, args, Users, event, Threads, utils, client }) {
-
-  try {
 let { messageID, threadID, senderID, mentions } = event;
 const chalk = require('chalk');
 const moment = require("moment-timezone");
@@ -42,9 +40,6 @@ var nameUser = await Users.getNameUser(event.senderID)
 var msg = event.body||"photos, videos or special characters";
 
 console.log(`\n` + chalk.green(`⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n              ${userorgroup}\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n`) + `\n` + Nayan + nameBox + Nayan1 + threadid + chalk.blue(`user name : ${chalk.white(nameUser)}`) + "\n" + chalk.blue(`user id : ${chalk.white(senderID)}`) + '\n' + chalk.blue(`message : ${chalk.blueBright(msg)}`) + `\n\n` + chalk.green(`⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n        ${time}`) + `\n` + chalk.green(`⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯`) + `\n`);
-} catch (error) {
-    console.log(error)
-}
 }
 
 module.exports.run = async function ({ api, args, Users, event, Threads, utils, client }) {

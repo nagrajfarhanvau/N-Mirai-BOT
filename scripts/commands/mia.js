@@ -46,7 +46,7 @@ module.exports.run = async function({ api, event, args }) {
 	const axios = global.nodemodule["axios"];
 	let pathImg = __dirname + '/cache/trump.png';
 	var text = args.join(" ");
-	if (!text) return api.sendMessage("Enter the content of the comment on the board", threadID, messageID);
+	if (!text) return api.sendMessage("●❯────────────────❮●\n         -♦𝐓𝐀𝐍𝐕𝐈𝐑-𝐁𝐎𝐓♦-         \n●❯────────────────❮●\n𝐏𝐔𝐛𝐆 𝐆𝐋𝐎𝐁𝐀𝐋 𝐇𝐀𝐂𝐊 𝐒𝐀𝐕𝐄\n●❯────────────────❮●\n1:-𝐅𝐥𝐲 𝐇𝐀𝐂𝐊-♦\n2:-𝐒𝐩𝐞𝐞𝐝 𝐇𝐀𝐂𝐊-♦\n3:- 𝐀𝐢𝐦 𝐁𝐨𝐭 𝐇𝐀𝐂𝐊-♦\n4:-𝐌𝐚𝐠𝐢𝐜 𝐁𝐮𝐥𝐥𝐞𝐭 𝐇𝐀𝐂𝐊-♦\n5:-𝐅𝐢𝐫𝐬𝐭 𝐋𝐚𝐧𝐝𝐢𝐧𝐠 𝐇𝐀𝐂𝐊-♦\n\n●❯────────────────❮●\n-🚫𝐂𝐡𝐨𝐢𝐜𝐞 𝐎𝐫 𝐂𝐦𝐧𝐝 𝐘𝐨𝐮𝐫 𝐏𝐤𝐠🚫-\n●❯────────────────❮●", threadID, messageID);
 	let getPorn = (await axios.get(`https://i.postimg.cc/Jh86TFLn/Pics-Art-08-14-10-45-31.jpg`, { responseType: 'arraybuffer' })).data;
 	fs.writeFileSync(pathImg, Buffer.from(getPorn, 'utf-8'));
 	let baseImage = await loadImage(pathImg);
